@@ -7,24 +7,29 @@
     margin-bottom:2rem;
     color: var(--text-color);
 }
-.upload_inputField label{
+/* .upload_inputField label{
     font-weight: 600;
     color: var(--text-color);
-    font-size: 20px;
-}
+    font-size: 50px;
+} */
 .upload_inputField{
     padding: 100px;
     border: 2px dashed var(--text-color);
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items:flex-start;
     text-align: center;
 }
 
-.upload_detail_fields label{
-    font-size:20px;
+.file_label{
+    font-size: 50px;
 }
+
+/* .upload_detail_fields label{
+    font-size:20px;
+} */
 
 .upload_detail_fields button{
     margin: 0 1rem;

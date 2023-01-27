@@ -1,4 +1,5 @@
 import './upload.css'
+import CollectionsIcon from '@mui/icons-material/Collections';
 
 const Upload = () => {
   return (
@@ -12,9 +13,8 @@ const Upload = () => {
         </div>
         <hr />
         <div className='upload_inputField'>
-          <label htmlFor="">Choose Templet File</label>
+          <label htmlFor=""><CollectionsIcon id='file_label'/></label>
           <input  type="file" file-accept="jpg gif jpeg png bmp mp4"  placeholder='Upload Templet or Thumbnail'/>
-          
             <li>High Resolution Image(jpg/png/gif)</li>
             <li>Video(mp4,4:3)</li>
             <li> Animated gifs(4:3, 800x600 - 1600x1200)</li>

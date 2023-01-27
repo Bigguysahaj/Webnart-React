@@ -1,5 +1,6 @@
 import React from 'react'
 import './gamedetails.css'
+import Navbar from '../Navbar/Navbar'
 import ImageSlider from '../ExtraComp/ImageSlider';
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 
@@ -20,6 +21,7 @@ const Gamedetails = () => {
 
   return (
     <div className='container-fluid details'>
+        <Navbar/>
         <div className="thumbnail col-lg-12 col-md-12 col-sm-12">
             <h1>Name of Game</h1>
             <div className="slideContainer col-10">

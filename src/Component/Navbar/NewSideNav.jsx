@@ -4,8 +4,8 @@ import './newsidenav.css'
 import $ from 'jquery';
 import avtar from '../../Assets/avtart.png'
 
-import ToggleOffIcon from '@mui/icons-material/ToggleOff';
-import ToggleOnIcon from '@mui/icons-material/ToggleOn';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 const NewSideNav = ({ name, secondSection }) => {
 
@@ -20,6 +20,9 @@ const NewSideNav = ({ name, secondSection }) => {
     if (widthside < 600) {
       console.log("HIi")
       document.getElementById('dashboardSidenav').style.display = 'none';
+    }
+    else{
+      document.getElementById('dashboardSidenav').style.display = 'block';
     }
 
   }, [widthside])
@@ -36,35 +39,17 @@ const NewSideNav = ({ name, secondSection }) => {
       $('body').addClass("dark-theme");
       $('body').removeClass("light-theme");
       setCookie('theme', 'dark-theme', { path: '/' })
-      $('#light-theme').animate(
-        { deg: 180 },
-        {
-          duration: 500,
-          step: function (now) {
-            $(this).css({ transform: 'rotate(' + now + 'deg)' });
-            $('#light-theme').fadeOut('fast')
-            $('#dark-theme').fadeIn('fast');
-          }
-        }
-      );
+      document.getElementById('darkTheme').style.visibility = "visible";
+      document.getElementById("lightTheme").style.visibility = "hidden";
+      
     }
     else {
       setTheme('light-theme');
       setCookie('theme', 'light-theme', { path: '/' })
       $('body').addClass("light-theme");
       $('body').removeClass("dark-theme");
-      $('#dark-theme').animate(
-        { deg: 360 },
-        {
-          duration: 500,
-          step: function (now) {
-            $(this).css({ transform: 'rotate(' + now + 'deg)' });
-            $('#dark-theme').fadeOut('fast');
-            $('#light-theme').fadeIn('fast');
-
-          }
-        }
-      );
+      document.getElementById('lightTheme').style.visibility = "visible";
+      document.getElementById("darkTheme").style.visibility = "hidden";
     }
   }
 
@@ -74,33 +59,37 @@ const NewSideNav = ({ name, secondSection }) => {
       var value = cookies.theme;
       if (value === 'light-theme') {
         document.body.className = value;
-        document.getElementById(value).style.display = "block";
-        document.getElementById("dark-theme").style.display = "none";
+        document.getElementById('lightTheme').style.visibility = "visible";
+        document.getElementById("darkTheme").style.visibility = "hidden";
       }
       else {
         document.body.className = value;
-        document.getElementById(value).style.display = "block";
-        document.getElementById("light-theme").style.display = "none";
+        document.getElementById('darkTheme').style.visibility = "visible";
+        document.getElementById("lightTheme").style.visibility = "hidden";
       }
-
+      
     }
     else {
       document.body.className = 'light-theme';
-      document.getElementById('light-theme').style.display = "block";
-      document.getElementById('dark-theme').style.display = "none";
+      document.getElementById('lightTheme').style.visibility = "visible";
+      document.getElementById('darkTheme').style.visibility = "hidden";
 
     }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+
   return (
     <div id='sidenavMain'>
       <div className="dashboardsidenav" id='dashboardSidenav'>
         <div className="theme1" style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <a href="/"><h2 style={{ textAlign: 'center' }}>Webnart</h2></a>
-          <ToggleOnIcon className='theme_button1' id="dark-theme" onClick={toggleTheme} />
-          <ToggleOffIcon className='theme_button1' id="light-theme" onClick={toggleTheme} />
+          
+          <span id='themeToggleButton' onClick={toggleTheme}>
+            <DarkModeIcon id='darkTheme'/>
+            <WbSunnyIcon id='lightTheme'/>
+          </span>
         </div>
 
         <div className=''>
