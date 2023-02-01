@@ -1,41 +1,21 @@
 import React,{useState}from 'react'
-import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import './Navbar.css'
+import $ from 'jquery'
+import MenuIcon from '@mui/icons-material/Menu';
 
-const Navbar = ({button_name}) => {
 
-    const [toggleMenu, setToggleMenu] = useState(false);
+const Navbar = () => {
+    const[hidden, setShow] = useState("Hidden")
+    const togglebtn=()=>{
+        if(hidden){
+            $("#dashboardSidenav").toggle('slow');
+            setShow("show")
+        }
+    }
 
   return (
-    <div className="signup__navbar login_nav">
-        <div className="signup__navbar-links">
-            <h2><a href="/">Webnart</a></h2>
-            <div className="signup__navbar-links_container">
-                <p><a href="/">Home</a></p>
-                <p><a href="/">About</a></p>
-                <p><a href="/">Contact</a></p>
-            </div>
-        </div>
-        <div className="signup__navbar-sign">
-            <a href={(button_name==='Sign Up')?'/signup':'/login'}><button type="button">{button_name}</button></a>
-        </div>
-        <div className="signup__navbar-menu">
-            {toggleMenu
-                ? <RiCloseLine color="#fff" size={27} onClick={() => setToggleMenu(false)} />
-                : <RiMenu3Line color="#fff" size={27} onClick={() => setToggleMenu(true)} />}
-            {toggleMenu && (
-                <div className="signup__navbar-menu_container scale-up-center">
-                    <div className="signup__navbar-menu_container-links">
-                        <p><a href="/">Home</a></p>
-                        <p><a href="/">About</a></p>
-                        <p><a href="/">Contact</a></p>
-                    </div>
-                    <div className="signup__navbar-menu_container-links-sign">
-                        <button type="button"><a href="/signup">{button_name}</a></button>
-                    </div>
-                </div>
-            )}
-        </div>
+    <div className="signup__navbar login_nav" id='hamburger'>
+        <span id='hamb'><MenuIcon id='togglebtn hamb' onClick={togglebtn}/></span>
     </div>
   )
 }

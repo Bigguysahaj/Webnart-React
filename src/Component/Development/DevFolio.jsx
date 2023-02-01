@@ -1,5 +1,5 @@
 import React from 'react'
-// import Navbar from '../Navbar/Navbar';
+import Navbar from '../Navbar/Navbar';
 // import SideNav from '../Navbar/SideNav';
 import NewSideNav from '../Navbar/NewSideNav';
 import './Devfolio.css'
@@ -68,7 +68,7 @@ const DevFolio = () => {
 
     return (
         <div id='developer-div' style={{display:'flex'}}>
-            {/* <Navbar button_name={'join Us'}/> */}
+            <Navbar button_name={'join Us'}/>
             <NewSideNav name={devSideNavElement}/>
             {/* <SideNav name={devSideNavElement} logo={'https://t4.ftcdn.net/jpg/04/64/64/09/360_F_464640910_Bid7MoSLjzV6wv6Ukhks0sx9EhDgljIw.jpg'} /> */}
             {/* Content---------------------------------------------------------> */}

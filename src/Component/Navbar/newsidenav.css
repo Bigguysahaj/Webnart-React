@@ -1,3 +1,7 @@
+/* :root{
+    --color-dark:#21213f;
+    --color-light: white;
+} */
 
 #sidenavMain{
     min-height: 100vh;
@@ -9,8 +13,9 @@
     
 }
 .dashboardsidenav{
-    /* min-height: 100vh; */
+    min-height: 100vh;
     justify-content: space-evenly;
+    position: relative;
     position: sticky;
     min-width: 200px;
     height: fit-content;
@@ -63,6 +68,10 @@
 }
 
 .profile_id{
+
+    position: absolute;
+    bottom: 10px;
+    width: calc(100% - 20px);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -75,11 +84,24 @@
     border-radius: 50%;
 }
 .profile_id p{
+    
     cursor: pointer;
     color: var(--text-color);
     margin: 0;
 }
 
+#darkTheme, #lightTheme{
+    color:var(--theme-btn-color);
+    height: 28px;
+}
+
+#themeToggleButton{
+    background-color: var(--themebtn-color);
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    border-radius:15px;
+}
 
 @media screen and (max-width:1300px) {
     .dashboardsidenav{
@@ -118,7 +140,6 @@
     }
 
     .dashboardsidenav a li{
-        padding:1rem;
+        padding:0;
     }
-
 }
