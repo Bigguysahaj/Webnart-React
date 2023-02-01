@@ -1,0 +1,17 @@
+.portfolio-main {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-main);
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+:root {
+    --light-brown: #A27B5C;
+    --dark-brown: #623D20;
+    --background-main: #DCD7C9;
+    --heading: black;
+    --button-click-back: rgba(255, 255, 255, 0.3);
+    --close-white: #FCF9F2;
+}

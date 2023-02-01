@@ -24,6 +24,7 @@ import {
 import NewDev from './Component/Development/NewDev'
 import UserSideDashboard from './Component/Dashboards/UserSideDashboard'
 import AdminDashboard from './Component/Dashboards/Admindashboard/AdminDashboard.jsx'
+import PortfolioMain from './Component/Portfolio/PortfolioMain'
 
 function App() {
   return (
@@ -64,12 +65,14 @@ function App() {
           </Route>
           <Route exact path="/detailed-game" element={<Gamedetails />}>
           </Route>
-          <Route exact path="/newdev" element={<NewDev/>}>
+          <Route exact path="/newdev" element={<NewDev />}>
           </Route>
-          <Route exact path="/userdashbaord" element={<UserSideDashboard/>}>
+          <Route exact path="/userdashbaord" element={<UserSideDashboard />}>
           </Route>
-          <Route exact path="/admindashbaord" element={<AdminDashboard/>}>
+          <Route exact path="/admindashbaord" element={<AdminDashboard />}>
           </Route>
+          <Route path="/portfolio/:name" element={<PortfolioMain />} />
+
         </Routes>
       </BrowserRouter>
     </div>
