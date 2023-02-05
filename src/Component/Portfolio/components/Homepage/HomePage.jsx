@@ -14,8 +14,8 @@ const HomePage = ({ details }) => {
                     </div>
                 </div>
                 <div className='homeLangBtn'>
-                    {details?.skills?.map(value => (
-                        <button>{value}</button>
+                    {details?.skills?.map((value,i) => (
+                        <button key={i}>{value}</button>
                     ))}
                 </div>
             </div>

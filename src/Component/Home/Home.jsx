@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import $ from 'jquery';
 import "./Home.css";
 import quotes from './quotes.json'
@@ -14,6 +15,10 @@ import avtar from '../../Assets/avtart.png'
 import AppsIcon from '@mui/icons-material/Apps';
 
 const Home = () => {
+
+  const navigate= useNavigate();
+
+
 
   const [width, setWidth] = useState(window.innerWidth);
   window.addEventListener('resize', function () {
@@ -261,13 +266,16 @@ const Home = () => {
               </p>
             </div><br />
             <h2>Founders & Developers</h2>
+            {/* //vishal======================> */}
             <div className="tiles-div " id="tiles-div">
+              <a href="https://vishal-c0796.web.app/" style={{color:"black", textDecoration:'none'}}>
+
               <div className="tiles-l text-center" id="l-t"
                 onMouseLeave={ltLeave}
                 onMouseEnter={ltEnter}>
                 <div className="t-udiv">
                   {/* <AccountCircleIcon /> */}
-                  <img src={avtar} alt="avtar" />
+                  <img src="https://vishal-c0796.web.app/static/media/Mask%20Group%201.d7488a830b3327f2e4b3.png" alt="avtar" />
                 </div>
                 <p id="founderName">{founderName.name1}</p>
                 <p id="founderDesc">MERN Stack Developer</p>
@@ -277,10 +285,14 @@ const Home = () => {
                   <li><LocationOnIcon />  Delhi</li>
                 </ul>
               </div>
-              <div className="tiles-c-h text-center" id="c-t">
+              </a>
+              {/* rohan=========================> */}
+              <div className="tiles-c-h text-center" id="c-t" onClick={()=>{
+                navigate("/portfolio/rohan");
+              }}>
                 <div className="t-udiv">
                   {/* <AccountCircleIcon /> */}
-                  <img src={avtar} alt="avtar" />
+                  <img src={avtar} alt="avtar"/>
                 </div>
                 <p id="founderName">{founderName.name2}</p>
                 <p id="founderDesc">
@@ -292,10 +304,12 @@ const Home = () => {
                   <li><LocationOnIcon />  Delhi</li>
                 </ul>
               </div>
+
+              {/* shashank===========================> */}
               <div className="tiles-r text-center" id="r-t"
                 onMouseLeave={rtLeave}
                 onMouseEnter={rtEnter}
-              >
+                >
                 <div className="t-udiv">
                   {/* <AccountCircleIcon /> */}
                   <img src={avtar} alt="avtar" />

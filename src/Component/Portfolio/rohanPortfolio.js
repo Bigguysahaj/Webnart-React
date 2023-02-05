@@ -99,7 +99,7 @@ const rohan = {
         },
         {
             "name": "GPT-3 Portfolio",
-            "description": "Web App of Netflix (Clone) Including Trailer API of YouTube.",
+            "description": "",
 
             "deployLink": "https://gpt3portfolioclone.netlify.app/",
 

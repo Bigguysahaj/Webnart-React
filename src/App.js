@@ -71,7 +71,9 @@ function App() {
           </Route>
           <Route exact path="/admindashbaord" element={<AdminDashboard />}>
           </Route>
-          <Route path="/portfolio/:name" element={<PortfolioMain />} />
+
+          <Route path="/portfolio/:name" element={<PortfolioMain />}>
+          </Route>
 
         </Routes>
       </BrowserRouter>

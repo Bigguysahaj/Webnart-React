@@ -13,15 +13,22 @@ const PortfolioMain = () => {
         if (name === "rohan") {
             setDetails(rohan)
         }
-        var r = document.querySelector(':root');
-
-        r.style.setProperty('--background-main', rohan?.colorCombination[1]);
-        r.style.setProperty('--light-brown', rohan?.colorCombination[3]);
-        r.style.setProperty('--dark-brown', rohan?.colorCombination[3]);
-        r.style.setProperty('--close-white', rohan?.colorCombination[0]);
-
+        else if(name ==="shashank"){
+            setDetails(rohan)
+        }
         // eslint-disable-next-line
     }, [])
+
+    useEffect(() => {
+        if(details.colorCombination){
+            var r = document.querySelector(':root');
+            r.style.setProperty('--background-main', details?.colorCombination[1]);
+            r.style.setProperty('--light-brown', details?.colorCombination[3]);
+            r.style.setProperty('--dark-brown', details?.colorCombination[3]);
+            r.style.setProperty('--close-white', details?.colorCombination[0]);
+        }
+    }, [details])
+    
     return (
         <div className="portfolio-main">
             <Navbar logo={details?.logo} />

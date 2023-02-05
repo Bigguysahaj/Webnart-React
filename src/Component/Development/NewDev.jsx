@@ -92,20 +92,20 @@ const NewDev = () => {
                 <div className="container-fluid" id='content_list'>
                     <div className="dev-content-lists ">
                         <div className='item col-lg-4 col-md-4 col-sm-6'>
-                            <div className="flip-card">
-                                <div id='flip-card-front'>
+                            <div className="card_front">
+                                <div id='image_holder'>
                                     <a href="/">
                                         <img src="https://media.gettyimages.com/id/482018359/photo/india-gate-new-delhi.jpg?s=612x612&w=gi&k=20&c=e9heXVuTwxzgoqCl2mEQjti5yAVKNZJgg9MtbfPcQlM=" alt="" />
                                     </a>
                                 </div>
-                                <div className="flip-card-back">
-                                    <h1>John Doe</h1>
-                                    <p>Architect & Engineer</p>
-                                    <p>We love that guy</p>
+                                
+                                <div id="templet_info">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt ad id, consequuntur similique repellat, nulla dolores molestias aperiam, officiis nobis earum reprehenderit accusantium tempore! Iusto dolore accusamus ipsam libero fugiat.</p>
                                 </div>
+
+
                             </div>
                             <hr />
-
                             <div id='templet_caption'>
                                 <p>Title of Content</p>
                                 <a href="/developer/name_of_developer">Name of Developer</a>
