@@ -1,7 +1,7 @@
 import React from 'react'
 import './workshop-form.css'
 import { useState,useEffect } from 'react'
-import axios from '../../axios'
+import axios from 'axios'
 import Navbar from '../Navbar/Navbar'
 
 const Workshopregistration = () => {
@@ -15,11 +15,10 @@ const Workshopregistration = () => {
     email:"",
     phone:"",
     preknowledge:"",
-    attendance:"",
   })
 
   useEffect(() => {
-    if(user.fullname ==="" || user.phone ==="" || user.email ==="" || user.year ==="" || user.branch ==="" || user.section ==="" || user.attendance ===""){
+    if(user.fullname ==="" || user.phone ==="" || user.email ==="" || user.year ==="" || user.branch ==="" || user.section ===""){
       document.getElementById("submit-btn").setAttribute('disabled',true);
     }
     else{
@@ -44,15 +43,14 @@ const Workshopregistration = () => {
   const register=()=>{
     console.log(user);
     document.getElementById("submit-btn").setAttribute('disabled',true);
-    axios.post('/register', {
-      fullname:user.fullname,
-      branch:user.branch,
-      year:user.year,
-      section:user.section,
-      email:user.email,
-      phone:user.phone,
-      preknowledge:user.preknowledge,
-      attendance:user.attendance
+    axios.post('https://heartfelt-taiyaki-5222c7.netlify.app//register', {
+      FullName:user.fullname,
+      Branch:user.branch,
+      Year:user.year,
+      Section:user.section,
+      Email:user.email,
+      Phone:user.phone,
+      Preknowledge:user.preknowledge
   })
   .then(function (response) {
     // console.log(response);
@@ -79,9 +77,9 @@ const Workshopregistration = () => {
   }
 
 
-  const rangecss={
-    color:'white'
-  }
+  // const rangecss={
+  //   color:'white'
+  // }
 
   return (
     <div id='workshop'>
@@ -127,10 +125,10 @@ const Workshopregistration = () => {
               <input className="form-control" type = "text" name = "preknowledge" id = "preknowledge" autoComplete='off' placeholder='Any Knowledge about web-Dev...' onChange={handleinput} value={user.preknowledge} />
               <span>Insert Data Seprated with comma " , ".</span>
               
-              <label htmlFor="">Attendance(%) <span>*</span></label>
+              {/* <label htmlFor="">Attendance(%) <span>*</span></label>
               <input className="form-control attend" type = "range" name = "attendance" id = "attendance" autoComplete='off' placeholder='Attendance' onChange={handleinput} value={user.attendance}  required/> 
               <h4 id='valuee' style={rangecss}>{user.attendance} %</h4>
-              <span>Attendance till 2nd Nov 2022.</span>
+              <span>Attendance till 2nd Nov 2022.</span> */}
                 
 
               

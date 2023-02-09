@@ -16,7 +16,7 @@ import AppsIcon from '@mui/icons-material/Apps';
 
 const Home = () => {
 
-  const navigate= useNavigate();
+  const navigate = useNavigate();
 
 
 
@@ -127,14 +127,14 @@ const Home = () => {
   }
 
 
-  const showHide=()=>{
+  const showHide = () => {
     var element = document.getElementById('home-buttons');
-    $('#home-buttons').toggle(element.style.visibility='visible');
-    
+    $('#home-buttons').toggle(element.style.visibility = 'visible');
+
   }
 
-  window.onscroll = function() {
-    document.getElementById('home-buttons').style.position='absolute';
+  window.onscroll = function () {
+    document.getElementById('home-buttons').style.position = 'absolute';
   };
 
 
@@ -181,39 +181,39 @@ const Home = () => {
               </div>
             </div>
           </div>
-              
-              <div className="app-icon">
-                {/* <a href="" > */}
-                  <AppsIcon onClick={showHide}/>
-                {/* </a> */}
-              </div>
+
+          <div className="app-icon">
+            {/* <a href="" > */}
+            <AppsIcon onClick={showHide} />
+            {/* </a> */}
+          </div>
 
           <div className="buttons" id="home-buttons">
-              <div className="signup-btn">
-                <a href="/homeLogin">
-                  Login
-                </a>
-              </div>
-              <div className="signup-btn">
-                <a href="/signup">
-                  {/* <a href="/tnssignup"> */}
-                  Signup
-                </a>
-              </div>
-
-              {/* TNS */}
-              <div className="signup-btn">
-                <a href="/workshopregitrstion">
-                  WorkShop Registration
-                </a>
-              </div>
+            <div className="signup-btn">
+              <a href="/homeLogin">
+                Login
+              </a>
             </div>
+            <div className="signup-btn">
+              <a href="/signup">
+                {/* <a href="/tnssignup"> */}
+                Signup
+              </a>
+            </div>
+
+            {/* TNS */}
+            <div className="signup-btn">
+              <a href="/workshopregitrstion">
+                WorkShop Registration
+              </a>
+            </div>
+          </div>
           <div className="right-div ">
             {/* Central content of home page---------------------------------------- */}
             <div className="main-con">
               <h1>Welcome to </h1>
               <div className="w-div">
-                  Webnart
+                Webnart
                 <div className="wave">
                 </div>
               </div>
@@ -223,19 +223,19 @@ const Home = () => {
               {/* <a href="#second" style={{color: "white"}}> */}
               <span className="" style={{ cursor: "pointer" }}>
                 {/* <a href="" style={{ color: "white" }}> */}
-                  <button className="btn btn-lg btn-outline" style={{ color: "white", fontSize: "30px" }}>Let's Explore</button>
+                <button className="btn btn-lg btn-outline" style={{ color: "white", fontSize: "30px" }}>Let's Explore</button>
                 {/* </a> */}
               </span>
               {/* </a> */}
             </div>
-          </div>  
-            
+          </div>
+
         </div>
-      {/* </section> */}
+        {/* </section> */}
 
 
-      {/* 2ns Page starts from here==============================> */}
-      {/* <section id="second"> */}
+        {/* 2ns Page starts from here==============================> */}
+        {/* <section id="second"> */}
         <div className="top-nav" id="top-nav">
 
           <div className="content_cards">
@@ -268,11 +268,15 @@ const Home = () => {
             <h2>Founders & Developers</h2>
             {/* //vishal======================> */}
             <div className="tiles-div " id="tiles-div">
-              <a href="https://vishal-c0796.web.app/" style={{color:"black", textDecoration:'none'}}>
+              {/* <a href="https://vishal-c0796.web.app/" style={{color:"black", textDecoration:'none'}}> */}
 
               <div className="tiles-l text-center" id="l-t"
                 onMouseLeave={ltLeave}
-                onMouseEnter={ltEnter}>
+                onMouseEnter={ltEnter}
+                onClick={() => {
+                  window.location.href = "https://vishal-c0796.web.app/";
+                }}
+              >
                 <div className="t-udiv">
                   {/* <AccountCircleIcon /> */}
                   <img src="https://vishal-c0796.web.app/static/media/Mask%20Group%201.d7488a830b3327f2e4b3.png" alt="avtar" />
@@ -285,14 +289,14 @@ const Home = () => {
                   <li><LocationOnIcon />  Delhi</li>
                 </ul>
               </div>
-              </a>
+              {/* </a> */}
               {/* rohan=========================> */}
-              <div className="tiles-c-h text-center" id="c-t" onClick={()=>{
+              <div className="tiles-c-h text-center" id="c-t" onClick={() => {
                 navigate("/portfolio/rohan");
               }}>
                 <div className="t-udiv">
                   {/* <AccountCircleIcon /> */}
-                  <img src={avtar} alt="avtar"/>
+                  <img src={avtar} alt="avtar" />
                 </div>
                 <p id="founderName">{founderName.name2}</p>
                 <p id="founderDesc">
@@ -309,7 +313,7 @@ const Home = () => {
               <div className="tiles-r text-center" id="r-t"
                 onMouseLeave={rtLeave}
                 onMouseEnter={rtEnter}
-                >
+              >
                 <div className="t-udiv">
                   {/* <AccountCircleIcon /> */}
                   <img src={avtar} alt="avtar" />
@@ -383,26 +387,26 @@ const Home = () => {
             </div>
           </div>
         </div>
-      {/* </section> */}
+        {/* </section> */}
 
-      <div className="footer ">
-        <form className="form-group">
-          <label htmlFor="email">Subscribe to Newsletter</label>
-          <input
-            type="text"
-            id="email"
-            name="email"
-            className="form-control col-6"
-            placeholder="Email Address"
-          />
-          <div id="subscribe">
-            <button type="submit" className="btn btn-primary">
-              Subscribe
-            </button>
-          </div>
-        </form>
-        <div id="copyright">Webnart &copy; Copyright2021</div>
-      </div>
+        <div className="footer ">
+          <form className="form-group">
+            <label htmlFor="email">Subscribe to Newsletter</label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              className="form-control col-6"
+              placeholder="Email Address"
+            />
+            <div id="subscribe">
+              <button type="submit" className="btn btn-primary">
+                Subscribe
+              </button>
+            </div>
+          </form>
+          <div id="copyright">Webnart &copy; Copyright2021</div>
+        </div>
       </section>
     </>
   );

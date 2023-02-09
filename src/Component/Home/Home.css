@@ -185,7 +185,7 @@ a {
     width: fit-content;
     height: fit-content;
     display: flex;
-    visibility: hidden;
+    visibility: visible;
     right: 0;
     position:fixed;
     /* flex-wrap: wrap; */
