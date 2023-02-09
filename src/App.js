@@ -53,7 +53,7 @@ function App() {
           </Route>
           <Route exact path="/register" element={<Register />}>
           </Route>
-          <Route exact path="/workshopregitrastion" element={<Workshopregistration />}>
+          <Route exact path="/workshopregistration" element={<Workshopregistration />}>
           </Route>
           <Route exact path="/tnslogin" element={<Tnslogin />}>
           </Route>

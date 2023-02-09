@@ -203,7 +203,7 @@ const Home = () => {
 
             {/* TNS */}
             <div className="signup-btn">
-              <a href="/workshopregitrstion">
+              <a href="/workshopregistration">
                 WorkShop Registration
               </a>
             </div>
