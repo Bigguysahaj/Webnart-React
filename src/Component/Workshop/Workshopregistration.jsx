@@ -43,7 +43,7 @@ const Workshopregistration = () => {
   const register=()=>{
     console.log(user);
     document.getElementById("submit-btn").setAttribute('disabled',true);
-    axios.post('https://heartfelt-taiyaki-5222c7.netlify.app//register', {
+    axios.post('https://heartfelt-taiyaki-5222c7.netlify.app/register', {
       FullName:user.fullname,
       Branch:user.branch,
       Year:user.year,
