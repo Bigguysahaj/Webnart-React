@@ -43,7 +43,7 @@ const Workshopregistration = () => {
   const register=()=>{
     console.log(user);
     document.getElementById("submit-btn").setAttribute('disabled',true);
-    axios.post('https://heartfelt-taiyaki-5222c7.netlify.app/register', {
+    axios.post('https://workshop-zgnx.onrender.com/register', {
       FullName:user.fullname,
       Branch:user.branch,
       Year:user.year,
@@ -140,15 +140,19 @@ const Workshopregistration = () => {
         <div className='popup'>
           <div className='popupdata'>
             <h1>Important Notice</h1>
+            <h2 style={{'color':'red'}}>Prerequisites: HTML, CSS, JavaScript</h2>
             <ul>
-              <li>Time</li>
-              <li>Date</li>
-              <li>Venue</li>
-              <li>co-ordinator-1
-                <ul>Contact No.</ul>
+              <li>Time: To be Notify Soon</li>
+              <li>Date: 20 Feb 2023 to 24 Feb 2023</li>
+              <li>Venue: TO be Notify Soon</li>
+              <li>Rohan Kumar
+                <ul>8368519963</ul>
               </li>
-              <li>co-ordinator-2
-                <ul>Contact No.</ul>
+              <li>Shashank Chaurasia
+                <ul>9756705938</ul>
+              </li>
+              <li>Ritik Jain
+                <ul>9759464515</ul>
               </li>
             </ul>
             <button className='cross btn btn-danger' onClick={close}>Close</button>
