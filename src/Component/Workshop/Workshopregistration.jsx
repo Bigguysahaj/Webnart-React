@@ -44,6 +44,7 @@ const Workshopregistration = () => {
     console.log(user);
     document.getElementById("submit-btn").setAttribute('disabled',true);
     axios.post('https://workshop-zgnx.onrender.com/register', {
+    // axios.post('http://localhost:5001/register', {
       FullName:user.fullname,
       Branch:user.branch,
       Year:user.year,
@@ -54,6 +55,9 @@ const Workshopregistration = () => {
   })
   .then(function (response) {
     // console.log(response);
+    if(response.data.err){
+      return alert(response.data.err);
+    }
     setSuccess(true);
   })
   .catch(function (error) {
