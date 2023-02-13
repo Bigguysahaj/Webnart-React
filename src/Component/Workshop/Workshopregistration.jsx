@@ -12,13 +12,14 @@ const Workshopregistration = () => {
     branch:"",
     year:"",
     section:"",
+    roll:"",
     email:"",
     phone:"",
     preknowledge:"",
   })
 
   useEffect(() => {
-    if(user.fullname ==="" || user.phone ==="" || user.email ==="" || user.year ==="" || user.branch ==="" || user.section ===""){
+    if(user.fullname ==="" || user.phone ==="" || user.email ==="" || user.year ==="" || user.branch ==="" || user.section ==="" || user.roll ===""){
       document.getElementById("submit-btn").setAttribute('disabled',true);
     }
     else{
@@ -49,6 +50,7 @@ const Workshopregistration = () => {
       Branch:user.branch,
       Year:user.year,
       Section:user.section,
+      Roll:user.roll,
       Email:user.email,
       Phone:user.phone,
       Preknowledge:user.preknowledge
@@ -117,6 +119,9 @@ const Workshopregistration = () => {
                   <input className="form-control yr" type = "text" name = "section" id = "section" autoComplete='off' placeholder='Section' maxLength={1} minLength={1} min={2} onChange={handleinput} value={user.section}  required/> 
                 </div>
               </div>
+              
+              <label htmlFor="">Roll No. <span>*</span></label>
+              <input className="form-control" type = "text" name = "roll" id = "roll"  autoComplete='off' placeholder='Roll No.'onChange={handleinput} value={user.roll}  required/>
               
               <label htmlFor="">Email <span>*</span></label>
               <input className="form-control" type = "email" name = "email" id = "email"  autoComplete='off' placeholder='Email'onChange={handleinput} value={user.email}  required/>
