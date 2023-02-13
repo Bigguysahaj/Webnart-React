@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import Navbar from './components/Navbar/Navbar';
 import HomePage from "./components/Homepage/HomePage"
 import LatestProject from "./components/LatestProject/LatestProject"
+import AboutMe from "./components/AboutMe/AboutMe"
+import ContactUs from "./components/ContactUs/Contact"
 import "./PortfolioMain.css"
 import { useParams } from 'react-router-dom';
 import { rohan } from './rohanPortfolio';
@@ -13,14 +15,14 @@ const PortfolioMain = () => {
         if (name === "rohan") {
             setDetails(rohan)
         }
-        else if(name ==="shashank"){
+        else if (name === "shashank") {
             setDetails(rohan)
         }
         // eslint-disable-next-line
     }, [])
 
     useEffect(() => {
-        if(details.colorCombination){
+        if (details.colorCombination) {
             var r = document.querySelector(':root');
             r.style.setProperty('--background-main', details?.colorCombination[1]);
             r.style.setProperty('--light-brown', details?.colorCombination[3]);
@@ -28,12 +30,14 @@ const PortfolioMain = () => {
             r.style.setProperty('--close-white', details?.colorCombination[0]);
         }
     }, [details])
-    
+
     return (
         <div className="portfolio-main">
             <Navbar logo={details?.logo} />
             <HomePage details={details} />
             <LatestProject projectsList={details?.projectsList} />
+            <AboutMe details={details} />
+            <ContactUs details={details} />
         </div>
     );
 }

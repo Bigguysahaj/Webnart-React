@@ -56,13 +56,13 @@ const Navbar = ({ logo }) => {
                 <div className='nav-items' style={{ display: navDisplay }} id="navItems">
                     <a href="#home">Home</a>
                     <a href="#project">Project</a>
-                    <a href="#home">About Me</a>
-                    <a href="#home" className='contactAchor'>Contact Me</a>
+                    <a href="#about">About Me</a>
+                    <a href="#contact" className='contactAchor'>Contact Me</a>
                 </div>
 
             </div>
             <button onClick={() => {
-                window.location.href = "/#contact"
+                window.location.href = "#contact"
             }} className='contactBtn'>
                 Contact Me
             </button>
