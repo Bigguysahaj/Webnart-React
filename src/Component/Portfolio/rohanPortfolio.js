@@ -61,6 +61,12 @@ const rohan = {
     "photo": "https://drive.google.com/file/d/1gXIbDyH5nQTstnPvIhjGeAeybtC18ikW/view?usp=share_link",
     "logo": "https://drive.google.com/file/d/1qAXdT6MsJi1iaVAEdrddHGz6WNOTOQkh/view?usp=share_link",
     "aboutme": "I am a Frontend developer with React Js, Problem-solving skills and have passion for creating and designing software in a test- driven environment. Learning new Technology and try to do better in existing technology",
+    "colorCombination": ["#E3D3F0", "#D5C6E9", "#C6AFE1", "#483063"],
+    "development": ["Web Development", "ios Develeopment"],
+    "graphics": ["Adobe XD", "Adobe Illustrator"],
+    "githubLink": "https://github.com/kumarohan0115",
+    "instagramLink": "https://www.instagram.com/rohan_kumar0115/",
+    "email": "rohankr350@gmail.com",
     "projectsList": [
         {
             "name": "Webnart",
@@ -115,7 +121,7 @@ const rohan = {
             "videos": []
         }
     ],
-    "colorCombination": ["#E3D3F0", "#D5C6E9", "#C6AFE1", "#483063"]
+
 }
 
 export { rohan }
