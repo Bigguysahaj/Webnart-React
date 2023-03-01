@@ -190,12 +190,12 @@ const Home = () => {
 
           <div className="buttons" id="home-buttons">
             <div className="signup-btn">
-              <a href="/homeLogin">
+              <a href="/">
                 Login
               </a>
             </div>
             <div className="signup-btn">
-              <a href="/signup">
+              <a href="/">
                 {/* <a href="/tnssignup"> */}
                 Signup
               </a>
