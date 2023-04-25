@@ -147,6 +147,37 @@
     margin-top: 12%;
 }
 
+@media only screen and (max-width: 1536px) {
+  /* CSS rules for the 1536x1080p layout */
+
+  /* .Art_section > h1{
+    padding: 0px 100px 0px 100px;
+    white-space: nowrap;
+    font-size: 40px;
+  } */
+  .side-nav2 {
+    width: 153px;
+  }
+
+  .logo svg {
+    margin-left: -20px;
+    margin-top: 10px;
+    /* padding-bottom: 45px; */
+    width: 133.744px;
+    height: 115.494px;
+  }
+
+  .nav-con2 > a {
+    font-size: 0px;
+    margin-left: 25%;
+  }
+
+  .artgallary-home-main_div{
+    margin-left: 200px;
+    z-index: -1;
+  }
+
+}
 
 @media only screen and (max-width: 1075px) {
   .Art_section > h1{
@@ -154,10 +185,13 @@
     font-size: 40px;
     white-space: nowrap;
   }
+
+
   /* .nav-con2 > a {
     font-size: 10px;
   } */
 }
+
 
 @media only screen and (max-width: 768px) {
   .Art_section > h1{
